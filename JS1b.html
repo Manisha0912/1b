@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  Nested loops,while-loop,Do-while
+// nested loop1
+        let n = 5; 
+for (let i = 1; i <= n; i++) {
+    let stars = ""; 
+    for (let j = 1; j <= i; j++) {
+        stars += "*"; 
+    }
+    console.log(stars); 
+
+}
+// nested loop2
+let array1 = [1, 2, 3, 4, 5];
+let array2 = [3, 4, 5, 6, 7];
+let commonElements = [];
+
+for (let i = 0; i < array1.length; i++) {
+    for (let j = 0; j < array2.length; j++) {
+        if (array1[i] === array2[j]) {
+            commonElements.push(array1[i]);
+        }
+    }
+}
+
+console.log(commonElements);
+// while-loop1
+let numb= 1;
+
+while (numb <= 5) {
+    let factorial = 1;
+    let i = numb;
+    while (i > 1) {
+        factorial *= i;
+        i--;
+    }
+    console.log(`Factorial of ${numb}: ${factorial}`);
+    numb++;
+}
+
+
+// while-loop2
+let number = 12345;
+let reversed = 0;
+
+while (number > 0) {
+    let digit = number % 10;
+    reversed = reversed * 10 + digit;
+    number = Math.floor(number / 10);
+}
+
+console.log("Reversed Number:", reversed);
+
+// while-loop2
+
+let m = 10;
+let a = 0, b = 1;
+let i = 1;
+
+console.log("Fibonacci Sequence:");
+while (i <= m) {
+    console.log(a);
+    let next = a + b;
+    a = b;
+    b = next;
+    i++;
+}
+
+
+        // Do-while2
+
+        let num = 1;
+do {
+    if (num % 2 === 0) {
+        console.log(num);
+    }
+    num++;
+} while (num <= 10);
+      // Do-while3
+      let base = 5;
+let exponent = 3;
+let result = 1;
+let count = 0;
+
+do {
+    result *= base;
+    count++;
+} while (count < exponent);
+
+console.log(result);
+    </script>
+</body>
+</html>
